@@ -21,8 +21,8 @@ resource "docker_container" "container" {
   dynamic "labels" {
     for_each = var.labels
     content {
-      label = labels.label
-      value = labels.value
+      label = labels.value["label"]
+      value = labels.value["value"]
     }
   }
 }
