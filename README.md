@@ -27,13 +27,13 @@ terraform validate
 terraform plan
 
 # 7. Check the plan using var argument
-terraform plan -var 'labels_nginx={key="value",otherkey=0}'
+terraform plan -var 'labels_nginx={key="value",otherkey="othervalue"}'
 
 # 8. Check the plan using -var-file argument
 terraform plan -var-file variables.tfvars
 
 # 9. Check the plan using TF_VAR_* environment variables
-export TF_VAR_labels_nginx='{value="from_env",otherkey=0}' 
+export TF_VAR_labels_nginx='{value="from_env",otherkey="othervalue"}' 
 terraform plan
 unset TF_VAR_labels_nginx
 
