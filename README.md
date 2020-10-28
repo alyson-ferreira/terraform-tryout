@@ -34,7 +34,7 @@ terraform plan -var-file variables.tfvars | grep -C 3 -F 'labels {'
 
 # 9. Check the plan using TF_VAR_* environment variables
 export TF_VAR_labels_nginx='{value="from_env",otherkey="from_env"}'
-terraform plan
+terraform plan | grep -C 3 -F 'labels {'
 unset TF_VAR_labels_nginx
 
 # 10. Apply only the data
