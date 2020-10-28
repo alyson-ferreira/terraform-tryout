@@ -5,8 +5,8 @@ variable "container_image" {
 }
 
 variable "container_count" {
-  type        = number
-  default     = 1
+  type = number
+  default = 1
   description = "Number of containers to run"
 }
 
@@ -16,6 +16,6 @@ variable labels {
     label = string
     value = string
   }))
-  default     = []
+  default = []
   description = "https://www.terraform.io/docs/providers/docker/r/container.html#labels-1"
 }
