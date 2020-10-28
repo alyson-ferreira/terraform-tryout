@@ -16,7 +16,7 @@ terraform init
 # 2. Take a look at the source code
 
 # 3. Apply the fmt command
-terraform fmt
+terraform fmt -recursive
 
 # 4. Take a look at the source code again
 
