@@ -36,7 +36,7 @@ module "ngix_cluster" {
 
 module "httpd_cluster" {
   # Points to the same module as module.nginx_cluster, but fetches from Github
-  source = "git@github.com/alyson-ferreira/modules/containers-cluster?ref=main"
+  source = "git::https://github.com/alyson-ferreira/terraform-tryout//modules/containers-cluster?ref=main"
   container_count = 3
   container_image = "httpd:alpine"
 }
