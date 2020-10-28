@@ -1,3 +1,10 @@
+terraform {
+  required_providers {
+    docker = "~> 2.7"
+    random = "~> 3.0.0"
+  }
+}
+
 resource "docker_image" "image" {
   name = var.container_image
 }
